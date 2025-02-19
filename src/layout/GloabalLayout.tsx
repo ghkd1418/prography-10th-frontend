@@ -1,11 +1,13 @@
-import type { PropsWithChildren } from 'react';
+import { Outlet } from 'react-router';
 
 import * as styles from './GlobalLayout.css';
 
-const GlobalLayout = ({ children }: PropsWithChildren) => {
+const GlobalLayout = () => {
 	return (
 		<div className={styles.container}>
-			<main className={styles.main}>{children}</main>
+			<main className={styles.main}>
+				<Outlet />
+			</main>
 		</div>
 	);
 };
