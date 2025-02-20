@@ -1,6 +1,7 @@
 import Position from '@/components/apply/position/Position';
 import PrivacyPolicy from '@/components/apply/privacy-policy/PrivacyPolicy';
 import useFunnel from '@/hooks/useFunnel';
+import { assignInlineVars } from '@vanilla-extract/dynamic';
 
 import * as styles from './Apply.css';
 
@@ -15,8 +16,25 @@ const Apply = () => {
 
 	return (
 		<div className={styles.container}>
-			<h1>Prography 10기 지원서</h1>
+			<h1 className={styles.title}>Prography 10기 지원서</h1>
+			<div className={styles.progress}>
+				{steps.map((currentStep, index) => {
+					const isActive = step === currentStep;
 
+					return (
+						<div key={currentStep}>
+							<p
+								style={assignInlineVars({
+									[styles.activeColor]: isActive ? '#1774e9' : '#ddd',
+								})}
+								className={styles.progressStep}
+							>
+								{index + 1}
+							</p>
+						</div>
+					);
+				})}
+			</div>
 			<Funnel>
 				<Funnel.Step name="privacyPolicy">
 					<PrivacyPolicy
