@@ -11,7 +11,7 @@ import * as layers from './layers.css';
  *   hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
 globalStyle(
-	'*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *))',
+	'*:where(:not(html, iframe, canvas, img, svg, video, audio, input):not(svg *, symbol *))',
 	{
 		'@layer': {
 			[layers.reset]: {

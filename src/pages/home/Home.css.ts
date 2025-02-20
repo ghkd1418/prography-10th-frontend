@@ -77,5 +77,6 @@ export const applyButton = style([
 		width: 'min(25%, 50%)',
 		alignSelf: 'center',
 		fontWeight: 'bold',
+		minWidth: 'fit-content',
 	},
 ]);

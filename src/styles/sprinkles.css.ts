@@ -4,7 +4,7 @@ import { vars } from './vars.css';
 
 const responsiveProperties = defineProperties({
 	conditions: {
-		mobile: { '@media': 'screen and (min-width: 360px)' },
+		mobile: { '@media': 'screen and (min-width: 0px)' },
 		tablet: { '@media': 'screen and (min-width: 768px)' },
 		desktop: { '@media': 'screen and (min-width: 1024px)' },
 	},
