@@ -1,5 +1,6 @@
 import Position from '@/components/apply/position/Position';
 import PrivacyPolicy from '@/components/apply/privacy-policy/PrivacyPolicy';
+import Profile from '@/components/apply/profile/Profile';
 import useFunnel from '@/hooks/useFunnel';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 
@@ -38,13 +39,19 @@ const Apply = () => {
 			<Funnel>
 				<Funnel.Step name="privacyPolicy">
 					<PrivacyPolicy
+						next={() => setStepHandler('profile')}
+						updateState={updateState}
+					/>
+				</Funnel.Step>
+				<Funnel.Step name="profile">
+					<Profile
 						next={() => setStepHandler('position')}
 						updateState={updateState}
 					/>
 				</Funnel.Step>
 				<Funnel.Step name="position">
 					<Position
-						next={() => setStepHandler('position')}
+						next={() => setStepHandler('complete')}
 						updateState={updateState}
 					/>
 				</Funnel.Step>

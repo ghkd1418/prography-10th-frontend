@@ -1,3 +1,6 @@
+import FormRadio from '../form-radio/FormRadio';
+import * as styles from './Position.css';
+
 interface PositionProps {
 	next: () => void;
 	updateState: (key: string, value: string) => void;
@@ -14,18 +17,24 @@ const positionData = [
 
 const Position = ({ next, updateState }: PositionProps) => {
 	return (
-		<section className="positionWrapper">
-			<h1 className="title">직무를 선택해 주세요.</h1>
-			<ul className="selectBtns">
-				{positionData.map((position) => {
-					return <li key={position}>{position}</li>;
-				})}
-			</ul>
+		<section className={styles.container}>
+			<h2 className={styles.subTitle}>지원 정보</h2>
+			<FormRadio
+				name="position"
+				label="지원하고 싶은 분야를 선택해주세요."
+				options={positionData.map((position) => ({
+					id: position,
+					label: position,
+				}))}
+				updateState={updateState}
+			/>
+
 			<button
 				onClick={() => {
 					next();
 					updateState('직무', '프론트엔드');
 				}}
+				className={styles.button}
 			>
 				다음
 			</button>
