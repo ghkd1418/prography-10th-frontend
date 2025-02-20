@@ -1,5 +1,6 @@
 import GlobalLayout from '@/layout/GloabalLayout';
-import NotFound from '@/pages/NotFound';
+import NotFound from '@/pages/Error/NotFound';
+import { RouterErrorBoundary } from '@/pages/Error/RouterErrorBoundary';
 import Apply from '@/pages/apply/Apply';
 import Home from '@/pages/home/Home';
 import { createBrowserRouter } from 'react-router';
@@ -7,8 +8,9 @@ import { createBrowserRouter } from 'react-router';
 export const routers = createBrowserRouter([
 	{
 		path: '/',
-		errorElement: <NotFound />,
+		errorElement: <RouterErrorBoundary />,
 		element: <GlobalLayout />,
+
 		children: [
 			{
 				index: true,
@@ -16,5 +18,9 @@ export const routers = createBrowserRouter([
 			},
 			{ path: '/apply', element: <Apply /> },
 		],
+	},
+	{
+		path: '*',
+		element: <NotFound />,
 	},
 ]);
