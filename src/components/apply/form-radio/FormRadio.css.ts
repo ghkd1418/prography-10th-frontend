@@ -36,3 +36,26 @@ export const input = style([
 		fontSize: '2x',
 	},
 ]);
+
+export const button = style([
+	sprinkles({
+		borderRadius: '2x',
+		background: 'primary',
+		padding: '1x',
+		color: 'white',
+		fontSize: '2x',
+	}),
+	{
+		border: 'solid 1px',
+		width: 'min(8%, 50%)',
+		alignSelf: 'flex-end',
+		fontWeight: 'bold',
+		minWidth: 'fit-content',
+	},
+]);
+
+export const errorMessage = style([
+	{
+		color: 'red',
+	},
+]);

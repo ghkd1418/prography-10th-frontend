@@ -53,3 +53,9 @@ export const button = style([
 		minWidth: 'fit-content',
 	},
 ]);
+
+export const errorMessage = style([
+	{
+		color: 'red',
+	},
+]);

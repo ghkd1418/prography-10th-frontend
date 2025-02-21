@@ -14,7 +14,7 @@ const Apply = () => {
 		steps,
 		'privacyPolicy',
 	);
-	console.log('🚀 ~ Apply ~ state:', state, step);
+	console.log('🚀 ~ Apply ~ state:', state);
 
 	return (
 		<div className={styles.container}>

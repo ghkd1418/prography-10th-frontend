@@ -27,17 +27,8 @@ const Position = ({ next, updateState }: PositionProps) => {
 					label: position,
 				}))}
 				updateState={updateState}
+				next={next}
 			/>
-
-			<button
-				onClick={() => {
-					next();
-					updateState('직무', '프론트엔드');
-				}}
-				className={styles.button}
-			>
-				다음
-			</button>
 		</section>
 	);
 };

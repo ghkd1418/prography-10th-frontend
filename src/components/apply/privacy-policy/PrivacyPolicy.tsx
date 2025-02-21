@@ -7,10 +7,6 @@ interface PrivacyPolicyProps {
 }
 
 const PrivacyPolicy = ({ next, updateState }: PrivacyPolicyProps) => {
-	const handleNext = () => {
-		next();
-	};
-
 	return (
 		<section className={styles.container}>
 			<h2 className={styles.subTitle}>개인정보 수집 동의</h2>
@@ -31,10 +27,8 @@ const PrivacyPolicy = ({ next, updateState }: PrivacyPolicyProps) => {
 					{ id: 'disagree', label: '개인정보 수집여부에 동의하지 않습니다.' },
 				]}
 				updateState={updateState}
+				next={next}
 			/>
-			<button onClick={handleNext} className={styles.button}>
-				다음
-			</button>
 		</section>
 	);
 };
