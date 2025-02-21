@@ -53,7 +53,7 @@ const Profile = ({ next, updateState }: PrivacyPolicyProps) => {
 	});
 
 	const onSubmit = (data: FormData) => {
-		updateState('profileㄴ', data);
+		updateState('profile', data);
 		next();
 	};
 

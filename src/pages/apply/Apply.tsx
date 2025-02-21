@@ -20,8 +20,11 @@ const Apply = () => {
 	);
 
 	const handlepostApi = () => {
-		const formData = objectToFormData(state);
 		// http POST
+		const formData = objectToFormData(state);
+		for (const [key, value] of formData.entries()) {
+			console.log(key, value);
+		}
 	};
 
 	return (
