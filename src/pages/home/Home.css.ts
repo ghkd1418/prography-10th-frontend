@@ -78,5 +78,10 @@ export const applyButton = style([
 		alignSelf: 'center',
 		fontWeight: 'bold',
 		minWidth: 'fit-content',
+		cursor: 'pointer',
+
+		':hover': {
+			opacity: 0.9,
+		},
 	},
 ]);

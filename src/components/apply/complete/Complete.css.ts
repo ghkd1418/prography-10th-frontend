@@ -33,5 +33,10 @@ export const button = style([
 		width: 'min(8%, 50%)',
 		fontWeight: 'bold',
 		minWidth: 'fit-content',
+		cursor: 'pointer',
+
+		':hover': {
+			opacity: 0.9,
+		},
 	},
 ]);

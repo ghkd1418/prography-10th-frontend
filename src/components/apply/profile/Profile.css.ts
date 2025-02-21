@@ -50,6 +50,11 @@ export const button = style([
 		alignSelf: 'flex-end',
 		fontWeight: 'bold',
 		minWidth: 'fit-content',
+		cursor: 'pointer',
+
+		':hover': {
+			opacity: 0.9,
+		},
 	},
 ]);
 

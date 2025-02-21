@@ -1,12 +1,21 @@
 import { useRouteError } from 'react-router';
 
+import * as styles from './Error.css';
+
 export function RouterErrorBoundary() {
 	let error = useRouteError() as Error;
 	return (
-		<div>
-			<h1>에러가 발생했어요! 😩</h1>
-			<pre>{error.message || JSON.stringify(error)}</pre>
-			<button onClick={() => (window.location.href = '/')}>홈으로</button>
+		<div className={styles.container}>
+			<h1 className={styles.title}>에러가 발생했어요! 😩</h1>
+			<pre className={styles.description}>
+				{error.message || JSON.stringify(error)}
+			</pre>
+			<button
+				className={styles.button}
+				onClick={() => (window.location.href = '/')}
+			>
+				홈으로
+			</button>
 		</div>
 	);
 }

@@ -8,32 +8,27 @@ export const container = style([
 		flexDirection: 'column',
 		gap: '4x',
 		padding: '4x',
+		textAlign: 'center',
+		alignItems: 'center',
 	}),
 ]);
 
-export const subTitle = style([
-	sprinkles({}),
-	{
-		fontSize: '2rem',
-		alignSelf: 'flex-start',
-	},
-]);
-
-export const content = style([
+export const title = style([
 	sprinkles({
-		padding: '2x',
-		display: 'flex',
-		flexDirection: 'column',
-		gap: '1x',
+		fontSize: '3x',
 	}),
 	{
-		border: 'solid #e8eaee',
+		fontWeight: 'bold',
 	},
 ]);
 
 export const description = style([
+	sprinkles({
+		fontSize: '3x',
+		color: 'secondary',
+	}),
 	{
-		textAlign: 'start',
+		fontWeight: 'bold',
 	},
 ]);
 
@@ -48,7 +43,6 @@ export const button = style([
 	{
 		border: 'solid 1px',
 		width: 'min(8%, 50%)',
-		alignSelf: 'flex-end',
 		fontWeight: 'bold',
 		minWidth: 'fit-content',
 		cursor: 'pointer',

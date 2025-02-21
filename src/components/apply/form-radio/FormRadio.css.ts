@@ -8,9 +8,7 @@ export const wrapper = style([
 		flexDirection: 'column',
 		gap: '1x',
 	}),
-	{
-		marginBottom: '0.5rem',
-	},
+	{},
 ]);
 
 export const label = style([
@@ -51,6 +49,11 @@ export const button = style([
 		alignSelf: 'flex-end',
 		fontWeight: 'bold',
 		minWidth: 'fit-content',
+		cursor: 'pointer',
+
+		':hover': {
+			opacity: 0.9,
+		},
 	},
 ]);
 
