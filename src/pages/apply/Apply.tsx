@@ -1,3 +1,4 @@
+import Complete from '@/components/apply/complete/Complete';
 import Position from '@/components/apply/position/Position';
 import PrivacyPolicy from '@/components/apply/privacy-policy/PrivacyPolicy';
 import Profile from '@/components/apply/profile/Profile';
@@ -54,6 +55,9 @@ const Apply = () => {
 						next={() => setStepHandler('complete')}
 						updateState={updateState}
 					/>
+				</Funnel.Step>
+				<Funnel.Step name="complete">
+					<Complete />
 				</Funnel.Step>
 			</Funnel>
 		</div>
