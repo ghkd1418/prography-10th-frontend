@@ -30,7 +30,6 @@ export const button = style([
 		fontSize: '2x',
 	}),
 	{
-		border: 'solid 1px',
 		width: 'min(8%, 50%)',
 		fontWeight: 'bold',
 		minWidth: 'fit-content',

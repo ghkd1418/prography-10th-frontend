@@ -3,6 +3,7 @@ import Position from '@/components/apply/position/Position';
 import PrivacyPolicy from '@/components/apply/privacy-policy/PrivacyPolicy';
 import Profile from '@/components/apply/profile/Profile';
 import useFunnel from '@/hooks/useFunnel';
+import { objectToFormData } from '@/shared/utils/objectToFormData';
 import { assignInlineVars } from '@vanilla-extract/dynamic';
 
 import * as styles from './Apply.css';
@@ -14,7 +15,11 @@ const Apply = () => {
 		steps,
 		'privacyPolicy',
 	);
-	console.log('🚀 ~ Apply ~ state:', state);
+
+	const handlepostApi = () => {
+		const formData = objectToFormData(state);
+		// http POST
+	};
 
 	return (
 		<div className={styles.container}>
@@ -56,7 +61,7 @@ const Apply = () => {
 						updateState={updateState}
 					/>
 				</Funnel.Step>
-				<Funnel.Step name="complete">
+				<Funnel.Step name="complete" onEnter={handlepostApi}>
 					<Complete />
 				</Funnel.Step>
 			</Funnel>

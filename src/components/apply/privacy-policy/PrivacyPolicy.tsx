@@ -20,7 +20,7 @@ const PrivacyPolicy = ({ next, updateState }: PrivacyPolicyProps) => {
 				</span>
 			</div>
 			<FormRadio
-				name="개인정보수집"
+				name="policy"
 				label="개인정보 수집여부 동의 여부를 체크해주세요."
 				options={[
 					{ id: 'agree', label: '개인정보 수집여부에 동의합니다.' },
