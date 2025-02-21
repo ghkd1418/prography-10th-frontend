@@ -1,10 +1,13 @@
+import { assignInlineVars } from '@vanilla-extract/dynamic';
+
 import Complete from '@/components/apply/complete/Complete';
 import Position from '@/components/apply/position/Position';
 import PrivacyPolicy from '@/components/apply/privacy-policy/PrivacyPolicy';
 import Profile from '@/components/apply/profile/Profile';
+
 import useFunnel from '@/hooks/useFunnel';
+
 import { objectToFormData } from '@/shared/utils/objectToFormData';
-import { assignInlineVars } from '@vanilla-extract/dynamic';
 
 import * as styles from './Apply.css';
 

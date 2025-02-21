@@ -6,7 +6,6 @@ import {
 	useEffect,
 	useState,
 } from 'react';
-
 import { useLocation, useNavigate, useSearchParams } from 'react-router';
 
 export type StepsType = Readonly<[string, ...string[]]>;
