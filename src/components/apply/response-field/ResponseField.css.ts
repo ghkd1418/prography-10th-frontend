@@ -8,6 +8,8 @@ export const description = style([
 	}),
 	{
 		alignContent: 'center',
+		fontWeight: 600,
+		marginBottom: '0.5rem',
 	},
 ]);
 

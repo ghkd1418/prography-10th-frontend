@@ -31,6 +31,24 @@ export const content = style([
 	},
 ]);
 
+export const input = style([
+	sprinkles({
+		padding: '0x',
+		display: 'flex',
+		flexDirection: 'column',
+		gap: '1x',
+		borderRadius: '1x',
+	}),
+	{
+		border: 'solid #e8eaee',
+		width: '100%',
+
+		'::placeholder': {
+			color: '#54617185',
+		},
+	},
+]);
+
 export const description = style([
 	{
 		textAlign: 'start',
@@ -61,5 +79,6 @@ export const button = style([
 export const errorMessage = style([
 	{
 		color: 'red',
+		marginTop: '0.5rem',
 	},
 ]);

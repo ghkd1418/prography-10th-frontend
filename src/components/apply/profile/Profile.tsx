@@ -32,7 +32,12 @@ const FormInput = ({
 }) => (
 	<div className="mb-4">
 		<ResponseField label={label} require>
-			<input type={type} placeholder={placeholder} {...register(name)} />
+			<input
+				type={type}
+				placeholder={placeholder}
+				{...register(name)}
+				className={styles.input}
+			/>
 			{error && <p className={styles.errorMessage}>{error}</p>}
 		</ResponseField>
 	</div>
