@@ -39,7 +39,7 @@ const FormRadio = ({
 						className={styles.label}
 					>
 						<input
-							{...register(name, { required: '동의 여부를 선택해주세요.' })}
+							{...register(name, { required: '꼭 하나를 선택해주세요.' })}
 							type="radio"
 							value={option.id}
 							id={`field-${option.id}`}
